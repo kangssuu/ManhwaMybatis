@@ -1,0 +1,311 @@
+@charset "UTF-8";
+* {  
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(247, 254, 255, 0.369)
+}
+
+header {
+    width: 100%;
+}
+    #h-top {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        height: 40px;
+    }
+        #h-top1 {
+            width: 100%;
+            max-width: 1260px;
+            margin: 0 auto;
+        }
+                #top-nv{
+                    float: right;
+                }
+                #top-nv .topNv-li {
+                    display: inline-block; 
+                    }
+                #top-nv .topNv-li {
+                    position: relative;
+                }
+                #top-nv > .topNv-li > a {
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 10px;
+                    font-size: 14px;
+                    color: #777;
+                }
+        
+
+    #h-bottom {
+        position: relative;
+        width: 100%;
+    }
+        #h-b-inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1260px;
+            /* min-width: 1024px; */
+            height: 150px;
+            margin: 0 auto;
+        }  
+            #logo {
+                position: relative;
+                left: 0;
+                /* width: 380px;
+                height: 150px; */
+                /* top: 21px; */
+                --margin: 0 auto;
+            }
+            #search {
+                position: relative;
+                width: 300px;
+                padding-left: 30px;
+            }
+                fieldset {
+                    border: 2px solid rgba(161, 213, 248, .8);
+                    border-radius: 20px;
+                    position: relative; 
+                    overflow: hidden;
+                }
+
+                legend {
+                    position: absolute;
+                    font-size: 0;
+                }
+                    #searchBar {
+                        text-indent: 10px;
+                        width: 85%;
+                        height: 30px;
+                        border: 0;
+                        font-size: 13px;
+                    }
+                    #searchIcon {
+                        position: absolute;
+                        left: 260px;
+                        overflow: hidden;
+                    }
+            #icon {
+                margin-left: 50px;
+                flex: 1 0 auto;
+            }
+                #iconImages {
+                    display: flex;
+                    height: 120px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    
+                }
+                    #iconImages > .iconImages-li {
+                        margin-right: 5px;
+                    }
+                    #iconImages > .iconImages-li > a {
+                        display: inline-block;
+                        width: 52px;
+                        height: 52px;
+                        background-size: cover;
+                        color: #333;
+                        margin-left: 20px;
+                    }
+
+        #h-b-2 {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+            #h-b-inner2 {
+                position: relative;
+                width: 100%;
+                max-width: 1260px;
+                margin: 0 auto;
+            }
+                #go {
+                    display: block;
+                }
+                    #go p {
+                        position: relative;
+                        float: left;
+                        width: 50px;
+                        height: 50px;
+                        border-left: 1px solid #ddd;
+                        border-right: 1px solid #ddd;
+                        text-align: center;
+                    }
+                #nav {
+                    float: left;
+                    display: block;
+                    height: 50px;
+                    margin-left: 10px;
+                    position: relative;
+                }
+                    #nav-nv {
+                        position: relative;
+                    }
+                    #nav-nv .nav-li {
+                        display: inline-block;
+                        position: relative;
+                    }
+                    #nav li {
+                        text-align: center;
+                        padding: 0 12px;
+                    }
+                    #nav #nav-nv .nav-li > a {
+                        line-height: 50px;
+                        padding: 0 12px;
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
+main {
+    position: relative;
+    padding-bottom: 100px;
+    width: 100%;
+}
+h2 {
+    max-width: 1260px;
+    margin: 70px auto 20px;
+    font-size: 30px;
+}
+#infor {
+    position: relative;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-right: 320px;
+}
+    #inforText {
+        position: relative;
+        padding-top: 20px;
+
+    }
+        #checkBtn {
+            height: 32px;
+            border-bottom: 1px solid #888;
+        }
+        #checkBtn > label > .span {
+            margin-left: 5px;
+        }
+        #pickBtn {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            margin: 0;
+        }
+        #removeBtn {
+            height: 32px;
+            padding: 0 15px;
+            border: 1px solid;
+            background-color:  white;
+            color: rgb(65, 179, 255);
+        }
+    #cartList { 
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    #none {
+        padding: 150px 0 100px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #priceInfor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+    }
+        #inner {
+            width: 300px;
+            padding: 20px 0;
+        }
+            #box {
+                padding: 0 20px;
+                border: 2px solid #333;
+            }
+                #inner #box .boxTitle{
+                    
+                    margin: 15px 0 15px;
+                }
+                dl {
+                    position: relative;
+                    padding: 8px 0;
+                    text-align: right;
+                }
+                dt{
+                    float: left;
+                }
+                dd{
+                    display: inline-block;
+                }
+                #sum {
+                    margin: 5px 0;
+                    padding: 10px 0 15px;
+                    border-top: 1px dotted #333;
+                    border-color:  rgb(65, 179, 255);
+                }
+                #sum > dt {
+                    line-height: 30px;
+                }
+                #sum > dd {
+                    font-size: 22px;
+                    color: rgba(253, 91, 145, 0.863);
+                    font-weight: bold;
+                }
+                #num > span {
+                    font-size: 25px;
+                }
+    #buyBtn {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(162, 214, 246);
+        border: 1px solid rgb(162, 214, 246);
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+footer {
+    position: relative;
+    border-top: 2px solid #e0f4fb;
+    
+}
+    #footerContainer {
+        width: 100%;
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+    #footerContainer ul li{
+        font-size: 13px;
+        line-height: 20px;
+    }
+        #footerMenu {
+            display: block;
+            padding: 10px 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        #footerMenu li {
+            display: inline-block;
+            padding: 0 15px;
+            border-left: 1px solid #e6e6e6;
+        }
+        #footerMenu li:first-child {
+            border-left: 0;
+            padding-left: 0;
+        }

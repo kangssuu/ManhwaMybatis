@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ItemMapper">
+	<resultMap type="kr.co.funnyjoy.item.model.vo.Item" id="itemResultMap">
+		<id property="itemNo" column="ITEM_NO" />
+		<result property="itemName" column="ITEM_NAME" />
+		<result property="itemImageName" column="ITEM_IMAGE_NAME"/>
+		<result property="itemImagePath" column="ITEM_IMAGE_PATH"/>
+		<result property="itemPublisher" column="ITEM_PUBLISHER"/>
+		<result property="itemPrice" column="ITEM_PRICE"/>
+		<result property="reviewCount" column="REVIEW_COUNT"/>
+	</resultMap>
+	
+	<select id="selectItemList" resultMap="itemResultMap">
+		SELECT * FROM ITEM_TBL
+	</select>
+	<select id="selectItemListCount" resultMap="itemResultMap">
+		SELECT COUNT(*) FROM ITEM_TBL
+	</select>
+</mapper>

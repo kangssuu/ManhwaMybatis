@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper">
+	<resultMap type="kr.co.funnyjoy.member.model.vo.Member" id="memberResultMap">
+		<id 	property="memberId" 			column="MEMBER_ID" />  <!-- id는 primary key일 때 씀 -->
+		<result property="memberPw" 			column="MEMBER_PW" />
+		<result property="memberName" 			column="MEMBER_NAME" />
+		<result property="memberAddress" 		column="MEMBER_ADDRESS" />
+		<result property="memberFirstPhone" 	column="MEMBER_FIRSTPHONE" />
+		<result property="memberSecondPhone" 	column="MEMBER_SECONDPHONE" />
+		<result property="memberLastPhone" 		column="MEMBER_LASTPHONE" />
+		<result property="memberEmail" 			column="MEMBER_EMAIL" />
+		<result property="memberDate" 			column="MEMBER_DATE" />
+		<result property="updateDate" 			column="UPDATE_DATE" />
+<!-- 	db테이블 컬럼명이랑 클래스 필드의 변수명이 똑같으면 mybatis가 알아서 테이블의 값을 가져오지만 다르다면 직접 매핑해 줘야함 -->
+<!-- 	클래스 필드명과 db테이블 컬럼명이 달라서 매핑해 주어야 함 -->
+	</resultMap>
+	
+	
+<!-- 	생략 가능 parameterMap type="com.kh.member.model.vo.Member" -->
+	<insert id="insertMember">
+		INSERT INTO MEMBER_TBL VALUES(#{memberId}, #{memberPw}, #{memberName}, #{memberAddress}, #{memberFirstPhone}, #{memberSecondPhone}, #{memberLastPhone}, #{memberEmail}, DEFAULT, DEFAULT)
+	</insert>
+	
+	<update id="updateMember">
+		UPDATE MEMBER_TBL SET MEMBER_PW = #{memberPw}, MEMBER_ADDRESS = #{memberAddress}, MEMBER_FIRSTPHONE = #{memberFirstPhone}, MEMBER_SECONDPHONE = #{memberSecondPhone}, MEMBER_LASTPHONE = #{memberLastPhone}, MEMBER_EMAIL = #{memberEmail}, WHERE MEMBER_ID = #{memberId} 
+	</update>
+	
+<!-- 	생략가능 parameterType="com.kh.member.model.vo.Member" -->
+<!-- 	컬럼명과 필드명이 같을 때 사용, resultType="com.kh.member.model.vo.Member" -->
+	<delete id="deleteMember">
+		DELETE FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId } <!-- 값이 한 개만 넘어갈 땐 변수이름 직접 적어도 됨? -->
+		<!-- #{value } 얘도 사용 가능 -->
+	</delete>
+	
+<!-- 	생략가능 parameterType="com.kh.member.model.vo.Member" -->
+<!-- 	컬럼명과 필드명이 같을 땐 resultType="com.kh.member.model.vo.Member" 사용 -->
+	<select id="selectCheckLogin" resultMap="memberResultMap">  
+		SELECT * FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId } AND MEMBER_PW = #{memberPw }
+	</select>
+	
+	<select id="selectOneById" resultMap="memberResultMap">
+		SELECT * FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId }
+	</select>
+</mapper>
