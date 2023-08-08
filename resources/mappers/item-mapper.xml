@@ -13,10 +13,16 @@
 		<result property="reviewCount" column="REVIEW_COUNT"/>
 	</resultMap>
 	
+	<insert id="insertItem">
+		insert into item_tbl values(#{itemName}, #{itemImageName}, #{itemImagePath}, #{itemPublisher}, #{itemPrice})
+	</insert>
+	
 	<select id="selectItemList" resultMap="itemResultMap">
 		SELECT * FROM ITEM_TBL
 	</select>
-	<select id="selectItemListCount" resultMap="itemResultMap">
+	
+	<select id="getTotalCount" resultType="_int">
+	<!-- 가져올 타입을 '_타입' 이렇게 적어야 함. 하나 가져올 때 쓰는 듯  -->
 		SELECT COUNT(*) FROM ITEM_TBL
 	</select>
 </mapper>

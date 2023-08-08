@@ -17,6 +17,19 @@ public class ItemService {
 		iDao = new ItemDAO();
 	}
 
+	public int insertItem(Item item) {
+		SqlSession session = SqlSessionTemplate.getSqlSession();
+		int result = iDao.insertItem(session, item);
+		if(result > 0) {
+			session.commit();
+		}
+		else {
+			session.rollback();
+		}
+		session.close();
+		return result;
+	}
+
 	public PageData selectItemList(int currentPage) {
 		// Connection generate
 		SqlSession session = SqlSessionTemplate.getSqlSession();
@@ -29,4 +42,9 @@ public class ItemService {
 		return pd;
 	}
 
+	public int totalCount() {
+		SqlSession session = SqlSessionTemplate.getSqlSession();
+		int totalCount = iDao.getTotalCount(session);
+		return totalCount;
+	}
 }
