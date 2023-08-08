@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/resources/css/insert.css">
 </head>
 <body>
-	<div>
+	<div id="container">
 		<form action="/notice/insert.do" method="post">
 			<fieldset>
 				<legend>공지사항 등록</legend>

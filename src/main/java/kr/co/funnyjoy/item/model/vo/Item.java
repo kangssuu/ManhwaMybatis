@@ -9,6 +9,16 @@ public class Item {
 	private int itemPrice;
 	private int reviewCount;
 	
+	
+	public Item(String itemName, String itemImageName, String itemImagePath, String itemPublisher, int itemPrice) {
+		super();
+		this.itemName = itemName;
+		this.itemImageName = itemImageName;
+		this.itemImagePath = itemImagePath;
+		this.itemPublisher = itemPublisher;
+		this.itemPrice = itemPrice;
+	}
+
 	public int getItemNo() {
 		return itemNo;
 	}

@@ -3,7 +3,21 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header>
 	<div id="h-top">
+		<!-- id가 null이 아닐 때 -->
 		<c:if test="${sessionScope.memberId ne null }">  <!-- ne => not equles -->
+			<!-- id가 admin이면 아래 코드를 실행 (eq => equal) -->
+			<c:if test="${memberId eq 'admin' }">
+				<div id="h-top1">
+					<ul id="top-nv" class="ul-d">
+					<li class="topNv-li"><a href="/member/logout.do">로그아웃</a></li>
+						<li class="topNv-li"><a href="/member/memberManage.do">회원 관리</a></li>
+						<li class="topNv-li"><a href="/member/itemManage.do">상품 관리</a></li>
+						<li class="topNv-li"><a href="/notice/list.do">공지사항</a></li>
+					</ul>
+				</div>
+			</c:if>
+			<!-- id가 admin이 아니면 아래 코드를 실행하는 중첩if문 이였습내당 (ne => not equal) -->
+			<c:if test="${memberId ne 'admin' }">
 			<div id="h-top1">
 				<ul id="top-nv" class="ul-d">
 					<li class="topNv-li"><a href="/member/logout.do">로그아웃</a></li>
@@ -11,6 +25,7 @@
 					<li class="topNv-li"><a href="/notice/list.do?member-id=${memberId }">공지사항</a></li>
 				</ul>
 			</div>
+			</c:if>
 		</c:if>
 		<c:if test="${memberId eq null }">
 			<div id="h-top1">
@@ -59,7 +74,7 @@
 				<div id="nav">
 					<ul id="nav-nv" class="ul-d">
 						<li class="nav-li">
-							<a href="/main/new.jsp">이달의 신간</a>
+							<a href="/item/new.do">이달의 신간</a>
 							<!-- 신상품 소량 모아놓은 페이지 -->
 						</li>
 						<li class="nav-li">

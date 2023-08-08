@@ -71,7 +71,7 @@
 		</tbody>
 	</table>
 	
-	<br><br>
+	<br><br><br>
 	<jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
 </body>
 </html>

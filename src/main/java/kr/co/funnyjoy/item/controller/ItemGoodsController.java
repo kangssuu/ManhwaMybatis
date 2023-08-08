@@ -17,14 +17,14 @@ import kr.co.funnyjoy.item.model.vo.PageData;
 /**
  * Servlet implementation class ItemController
  */
-@WebServlet("/item/best.do")
-public class ItemBestController extends HttpServlet {
+@WebServlet("/item/goods.do")
+public class ItemGoodsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ItemBestController() {
+    public ItemGoodsController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,16 +37,16 @@ public class ItemBestController extends HttpServlet {
 		ItemService service = new ItemService();
 		String page = request.getParameter("currentPage") != null ? request.getParameter("currentPage") : "1";
 		int currentPage = Integer.parseInt(page);
-		int totalCount = service.totalCount();
 		PageData pd = service.selectItemList(currentPage);
 		List<Item> itemList = pd.getItemList();
+		int totalCount = service.totalCount();
 		
 		// nList는 없어도 null이 아니라서 isEmpt()로 비어있는지 체크함
 		if(!itemList.isEmpty()) {
 			request.setAttribute("itemList", itemList);
 			request.setAttribute("pageNavi", pd.getPageNavi());
 			request.setAttribute("totalCount", totalCount);
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/item/best.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/item/goods.jsp");
 			view.forward(request, response);
 		}
 		else {

@@ -49,7 +49,7 @@ public class NoticeDAO {
 	}
 	
 	
-	public String generatePageNavi(int currentPage) {
+	public String generatePageNavi(SqlSession session, int currentPage) {
 		// 전체 게시물의 갯수 : 37
 		// 1페이지 보여줄 게시물 수 : 10
 		// 범위의 갯수 (네비게이터의 수) : ?  => 4
@@ -61,7 +61,8 @@ public class NoticeDAO {
 		// 전체 게시물의 갯수는 : 76
 		// 1페이지 보여줄 게시물 수 : 10
 		// 범위의 갯수 (네비게이터의 수) : ?  => 8
-		int totalCount = 205;  // 전체 게시물의 갯수를 동적으로 가지고 와야 함.
+//		int totalCount = 205;  // 전체 게시물의 갯수를 동적으로 가지고 와야 함.
+		int totalCount = getTotalCount(session);
 		int recordCountPerPage = 10;
 		int naviTotalCount = 0;
 		if (totalCount % recordCountPerPage > 0) {
@@ -115,6 +116,11 @@ public class NoticeDAO {
 	public int updateNotice(SqlSession session, Notice notice) {
 		int result = session.update("NoticeMapper.updateNotice", notice);
 		return result;
+	}
+
+	private int getTotalCount(SqlSession session) {
+		int totalCount = session.selectOne("NoticeMapper.getTotalCount");
+		return totalCount;
 	}
 
 }

@@ -1,4 +1,22 @@
 @charset "UTF-8";
+ul { 
+	list-style-type : none; 
+	padding-left : 0;
+}
+
+#modifyUl {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+}
+
+
+li > label { 
+	width : 80px; 
+	text-align:left; 
+	float:left;
+}
+
 * {  
     margin: 0;
     padding: 0;
@@ -6,13 +24,69 @@
 
 li {
     list-style: none;
+ 
 }
+
+#modifyList {
+	margin: 0 auto;
+	width: 100%;
+	list-style: none;
+	line-height: 60px;
+}
+
+	li span {
+		display: inline-block;
+		max-width: 120px;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: left;
+		margin: 0 3px;
+	}
+	
+	#member-firstPhone, #member-secondPhone, #member-lastPhone {
+    	width: 150px;
+    }
+	
+	input {
+	    width: 480px;
+	    height: 35px;
+	    border: 1px solid #999;
+	    border-radius: 4px;
+	}
+	
+	#btn-div{
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+		button {
+			width : 180px;
+			height:50px;
+			margin-top: 20px;
+			border: 1px solid rgba(161, 213, 248, .8);
+			background-color: rgba(161, 213, 248, .8);
+			font-size: 15px;
+			font-weight: bold;
+			color: white;
+			border-radius: 4px;
+		}
+		
+		#btn {
+			width : 180px;
+			height:50px;
+			margin-top: 20px;
+			border: 1px solid rgba(161, 213, 248, .8);
+			background-color: rgba(161, 213, 248, .8);
+			font-size: 15px;
+			font-weight: bold;
+			color: white;
+			margin-left: 5px; 
+		}
 
 a {
     text-decoration: none;
     color: #333;
 }
-
 
 #container {
     width: 100%;
@@ -173,36 +247,18 @@ header {
                         font-weight: bold;
                         font-size: 15px;
                     }
-                    
+
 main {
-    width: 100%;
-    position: relative;
-}
-    #mainTop {
-        width: 100%;
-        position: relative;
-        height: 150px;
-    }
-        #name {
-            float: left;
-            width: 40%;
-            text-align: center;
-        }
-        #benefit {
-            float: left;
-            width: 60%;
-            text-align: center;
-        }
-            #coupon {
-                float: left;
-            }
-            #point {
-                float: left;
-            }
+	width: 100%;
+} 
 
-
-
-
+	#modify{
+		width: 100%;
+		max-width: 700px;
+        margin: auto;
+	}
+	
+	
 footer {
     position: relative;
     border-top: 2px solid #e0f4fb;

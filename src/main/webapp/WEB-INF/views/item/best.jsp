@@ -29,7 +29,7 @@
                 </div>
                 <div id="product">
                     <div id="listMenu">
-                        <p id="text">총 <strong>30개</strong>의 상품이 있습니다.</p>
+                        <p id="text">총 <strong>${totalCount }개</strong>의 상품이 있습니다.</p>
                         <select name="array" id="array">
                             <option value="정렬방식">정렬방식</option>
                             <option value="신상품">신상품</option>
@@ -41,10 +41,11 @@
                     <div id="productList">
                         <ul id="mainUl">
                         <c:forEach var="itemList" items="${requestScope.itemList }">
+
 <%--                         <c:forEach begin="1" end="16"> --%>
                             <li>
                                 <div class="thumbnail">
-                                    <a href="/main/information.jsp">
+                                    <a href="/item/information.jsp">
                                         <div>
                                             <img src="/resources/image/product/best/best1.png" alt="썸네일1">
                                         </div>
@@ -52,7 +53,7 @@
                                 </div>
                                 <div class="infor">
                                     <p class="name">
-                                        <a href="/main/informaiton.jsp">
+                                        <a href="/item/informaiton.jsp">
                                             <span class="style" id="item-name" >${itemList.itemName }</span>
                                         </a>
                                     </p>

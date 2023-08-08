@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../resources/CSS/new.css">
+    <link rel="stylesheet" href="/resources/css/new.css">
     <title>신간페이지</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
                 </div>
                 <div id="product">
                     <div id="listMenu">
-                        <p id="text">총 <strong>10개</strong>의 상품이 있습니다.</p>
+                        <p id="text">총 <strong>${totalCount }개</strong>의 상품이 있습니다.</p>
                         <select name="array" id="array">
                             <option value="정렬방식">정렬방식</option>
                             <option value="신상품">신상품</option>
@@ -34,17 +34,18 @@
                     </div>
                     <div id="productList">
                         <ul id="mainUl">
+                        <c:forEach var="itemList" items="${requestScope.itemList }">
                             <li>
                                 <div class="thumbnail">
-                                    <a href="../detail/information.html">
+                                    <a href="/item/information.jsp">
                                         <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
+                                            <img src="/resources/image/product/best/best1.png" alt="썸네일1">
                                         </div>
                                     </a>
                                 </div>
                                 <div class="infor">
                                     <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
+                                        <a href="/item/information.jsp">
                                             <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
                                         </a>
                                     </p>
@@ -58,285 +59,17 @@
                                         </li>
                                         <li class="content">
                                             <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
+                                            <span class="number">&nbsp;1</span>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="../detail/information.html">
-                                        <div>
-                                            <img src="../resources/images/product/bset/best1.png" alt="썸네일1">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="infor">
-                                    <p class="name">
-                                        <a href="../CSS_Layout_page/item.html">
-                                            <span class="style">최애의 아이 1-10권(1,2,3,4,5,6,7,8,9,10)</span>
-                                        </a>
-                                    </p>
-                                    <div id="line_mov"></div>
-                                    <ul class="price">
-                                        <li class="content">
-                                            <span class="cost">6000원</span>
-                                        </li>
-                                        <li class="content">
-                                            <span class="sale">5400원</span>
-                                        </li>
-                                        <li class="content">
-                                            <strong class="review">리뷰 :</strong>
-                                            <span class="number">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+						</c:forEach>
                         </ul>
                     </div>
                 </div>
                 <div id="next">
-                    <a href="#">
-                        <img src="../resources/images/product/detail_img/btn_page_prev.png" alt="이전">
-                    </a>
-                    <ol>
-                        <li class="recode"><a href="#" id="one">1</a></li>
-                    </ol>
-                    <a href="next">
-                        <img src="../resources/images/product/detail_img/btn_page_next.png" alt="다음">
-                    </a>
+                    ${pageNavi }
                 </div>
             </div>
                             

@@ -66,7 +66,7 @@ public class NoticeService {
 		// 서비스는 연결생성, DAO호출, 연결해제
 		SqlSession session = SqlSessionTemplate.getSqlSession();  // 연결
 		List<Notice> nList = nDao.selectNoticeList(session, currentPage);  // DAO호출
-		String pageNavi = nDao.generatePageNavi(currentPage);
+		String pageNavi = nDao.generatePageNavi(session, currentPage);
 		PageData pd = new PageData(nList, pageNavi);
 		session.close();  // 연결해제
 		return pd;
